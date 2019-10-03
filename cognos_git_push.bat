@@ -34,14 +34,14 @@ echo commiting changes to git
 cd C:\Program Files\ibm\cognos\analytics\deployment\
 git add .
 git commit -m "New files to upload"
-git push --all https://notijohn:bf7aa3110cf375dc4cde5964b2f4cde667edaa39!@github.com/notijohn/cognos.git
+git push --all https://github.com/notijohn/cognos.git
 ::git push --all %gitrepo%
 set /p version_id=Enter version_id: 
 
 :: Git Tagging
 
 git tag %version_id%.%mydate%  
-git push https://notijohn:bf7aa3110cf375dc4cde5964b2f4cde667edaa39@github.com/notijohn/cognos.git %version_id%.%mydate%   
+git push https://github.com/notijohn/cognos.git %version_id%.%mydate%   
 ::git push %gitrepo% %version_id%.%mydate%   
  
 pause    
