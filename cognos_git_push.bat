@@ -30,9 +30,11 @@ SET "workenv=C:\Users\amit.u.sharma\Desktop\qliksense\workspace"
 set mydate=!date:~10,4!!date:~6,3!/!date:~4,2!
 
 echo commiting changes to git
-
-cd C:\Program Files\ibm\cognos\analytics\deployment\
-git add .
+xcopy "C:\Program Files\ibm\cognos\analytics\deployment\Test.zip" "C:\CognosDevOps\" /y
+cd C:\CognosDevOps\
+git remote add origin https://github.com/notijohn/cognos.git
+git pull origin master
+git add Test.zip
 git commit -m "New files to upload"
 git push --all https://github.com/notijohn/cognos.git
 ::git push --all %gitrepo%
