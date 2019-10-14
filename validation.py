@@ -25,8 +25,11 @@ def validate(self):
     input = pd.ExcelFile("Input.xlsx")
     report = input.parse("reportname")
     reportname = report.at[0, 'Report Name']
-    n = self.driver.find_element_by_xpath('//*[@id="com.ibm.bi.contentApps.myContentFoldersSlideout"]')
+    #n = self.driver.find_element_by_xpath('//*[@id="com.ibm.bi.contentApps.myContentFoldersSlideout"]')
+    #n.click()
+    n = self.driver.find_element_by_xpath('//*[@id="com.ibm.bi.contentApps.teamFoldersSlideout"]')
     n.click()
+    self.driver.find_element_by_xpath("//*[contains(text(), 'Fresh Report')]").click()
     sleep(10)
     # self.driver.find_element_by_xpath('//*[contains(text(),' +str(reportname)+')]').click()
     self.driver.find_element_by_xpath("//*[contains(text(), 'Order Detail Report')]").click()
