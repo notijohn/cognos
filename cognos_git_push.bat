@@ -34,7 +34,7 @@ xcopy "C:\Program Files\ibm\cognos\analytics\deployment\Test_db.zip" "C:\CognosD
 cd C:\CognosDevOps\
 git remote add origin https://github.com/notijohn/cognos.git
 git pull origin master
-git add Test.zip
+git add .
 git commit -m "New files to upload"
 git push --all https://github.com/notijohn/cognos.git
 ::git push --all %gitrepo%
