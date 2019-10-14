@@ -5,7 +5,6 @@ import glob
 import os
 import getpass
 import pyodbc
-from flask import jsonify
 user = getpass.getuser()
 
 
